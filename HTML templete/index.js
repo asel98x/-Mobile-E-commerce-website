@@ -74,7 +74,7 @@ $(document).ready(function(){
         }
     });
 
-    $qty_down.click(function(e){
+       $qty_down.click(function(e){
         let $input = $(`.qty_input[data-id='${$(this).data("id")}']`);
         if($input.val() > 1 && $input.val() <= 10){
             $input.val(function(i, oldval){
