@@ -4,18 +4,18 @@ namespace database;
 
 class DBController
 {
-    protected  $host = 'localhost';
+    protected $host = 'localhost';
     protected $user = 'root';
-    protected $password = "";
+    protected $password = '';
     protected $database = "shopee";
 
-    public $conn = null;
+    public $con = null;
 
     public function __construct()
     {
-        $this->conn = mysqli_connect($this->host,$this->user,$this->password,$this->database);
-        if($this->conn->connect_error){
-            echo "Fail".$this->con->connect_error;
+        $this->con = mysqli_connect($this->host, $this->user, $this->password, $this->database);
+        if ($this->con->connect_error){
+            echo "Fail " . $this->con->connect_error;
         }
     }
 
@@ -25,9 +25,9 @@ class DBController
     }
 
     protected function closeConnection(){
-        if($this->con!=null){
+        if ($this->con != null ){
             $this->con->close();
-            $this->conn->null;
+            $this->con = null;
         }
     }
 
