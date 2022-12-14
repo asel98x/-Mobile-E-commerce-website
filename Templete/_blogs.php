@@ -31,4 +31,4 @@
         </div>
     </div>
 </section>
-<!--Blog section--><?php
+<!--Blog section-->

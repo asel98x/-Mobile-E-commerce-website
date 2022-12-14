@@ -18,6 +18,10 @@
           integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="style.css">
+
+    <?php
+        require ('functions.php')
+    ?>
 </head>
 
 <body>
