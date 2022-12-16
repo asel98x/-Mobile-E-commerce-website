@@ -13,20 +13,6 @@ include ('Templete/_new-phones.php');
 
 include('Templete/_blogs.php');
 
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-<?php
 include ('footer.php');
 ?>
 
