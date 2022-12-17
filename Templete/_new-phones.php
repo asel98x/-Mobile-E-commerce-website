@@ -1,3 +1,5 @@
+<?php shuffle($product_shuffle) ?>
+
 <!--New phone list-->
 <section id="new-phones">
     <div class="container">
