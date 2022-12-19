@@ -16,7 +16,7 @@ shuffle($product_shuffle)
             <!--products-->
             <div class="item  py-2">
                 <div class="product font-rale">
-                    <a href="#"><img src="<?php echo $item['item_image']??"./assests/products/1.png";?>" alt="product1" class="img-fluid"></a>
+                    <a href="<?php printf('%s?item_id=%s','product.php',$item['item_id'])?>"><img src="<?php echo $item['item_image']??"./assests/products/1.png";?>" alt="product1" class="img-fluid"></a>
                     <div class="text-centure">
                         <h6><?php echo $item['item_name']??"Unknown";?></h6>
                         <div class="rating text-warning font-size-12">
