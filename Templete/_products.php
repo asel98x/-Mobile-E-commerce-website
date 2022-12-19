@@ -145,3 +145,8 @@
     </div>
 </section>
 <!--Product details-->
+
+<?php
+   endif;
+   endforeach;
+?>
