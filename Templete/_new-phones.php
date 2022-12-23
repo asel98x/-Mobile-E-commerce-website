@@ -1,4 +1,12 @@
-<?php shuffle($product_shuffle) ?>
+<?php shuffle($product_shuffle);
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    if(isset($_POST['new_phones_submit'])){
+        $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+    }
+}
+
+?>
 
 <!--New phone list-->
 <section id="new-phones">
@@ -13,7 +21,7 @@
                 <!--products-->
                 <div class="item  py-2 bg-light">
                     <div class="product font-rale">
-                        <a href="#"><img src="<?php echo $item['item_image']??"./assests/products/1.png";?>" alt="product1" class="img-fluid"></a>
+                        <a href="<?php printf('%s?item_id=%s','product.php',$item['item_id'])?>"><img src="<?php echo $item['item_image']??"./assests/products/1.png";?>" alt="product1" class="img-fluid"></a>
                         <div class="text-centure">
                             <h6><?php echo $item['item_name']??"Unknown";?></h6>
                             <div class="rating text-warning font-size-12">
@@ -26,7 +34,11 @@
                             <div class="price py-2">
                                 <span>$<?php echo $item['item_price']??'0';?></span>
                             </div>
-                            <button type="submit" class="btn btn-warning font-size-12">Add to cart</button>
+                            <form method="post">
+                                <input type="hidden" name="item_id" value="<?php echo $item['item_id'] ?? '1'; ?>">
+                                <input type="hidden" name="user_id" value="<?php echo 1; ?>">
+                                <button type="submit" name="new_phones_submit" class="btn btn-warning font-size-12">Add to Cart</button>
+                            </form>
                         </div>
                     </div>
                 </div>
